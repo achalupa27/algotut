@@ -56,10 +56,10 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
         );
     }
     return (
-        <Flex position='sticky' top={0} zIndex={1} bg='tomato' p={4} align='center'>
+        <Flex position='sticky' top={0} zIndex={1} bg='black' p={4} align='center'>
             <NextLink href='/'>
                 <Box>
-                    <Heading>AlgoTut</Heading>
+                    <Heading color='white'>AlgoTut</Heading>
                 </Box>
             </NextLink>
             <NextLink href='/create-post'>
