@@ -26,7 +26,7 @@ const Index = () => {
                 <Stack spacing={8}>
                     {data!.posts.posts.map((p) =>
                         !p ? null : (
-                            <Flex key={p.id} p={5} shadow='md' borderWidth='1px' align='center'>
+                            <Flex key={p.id} p={5} align='center' border='1px' borderColor='white'>
                                 <UpdootSection post={p} />
                                 <Box flex={1}>
                                     <NextLink href='/post/[id]' as={`/post/${p.id}`}>
@@ -34,7 +34,7 @@ const Index = () => {
                                             <Heading fontSize='xl'>{p.title}</Heading>
                                         </Box>
                                     </NextLink>
-                                    <Text>posted by {p.creator.username}</Text>
+                                    <Text>{p.creator.username}</Text>
                                     <Flex>
                                         <Text flex={1} mt={4}>
                                             {p.textSnippet}
@@ -60,6 +60,3 @@ const Index = () => {
 };
 
 export default withUrqlClient(createUrqlClient, { ssr: true })(Index);
-function useDeleteMutation(): [any, any] {
-    throw new Error('Function not implemented.');
-}

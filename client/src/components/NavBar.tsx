@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Heading } from '@chakra-ui/react';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import NextLink from 'next/link';
 import { useLogoutMutation, useMeQuery } from '../generated/graphql';
 import { useRouter } from 'next/router';
@@ -17,13 +17,13 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
         //   pause: isServer, // tells query not to run (on server)
     });
 
-    let body = null;
+    let authOptions = null;
 
     if (fetching) {
         // data loading
     } else if (!data?.me) {
         // user not logged in
-        body = (
+        authOptions = (
             <>
                 <Flex>
                     <NextLink href='/login'>
@@ -39,7 +39,7 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
         );
     } else {
         // user logged in
-        body = (
+        authOptions = (
             <Flex>
                 <Box mr={2}>{data.me.username}</Box>
                 <Button
@@ -55,17 +55,35 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
             </Flex>
         );
     }
+
     return (
-        <Flex position='sticky' top={0} zIndex={1} bg='tomato' p={4} align='center'>
-            <NextLink href='/'>
-                <Box>
-                    <Heading>AlgoTut</Heading>
-                </Box>
-            </NextLink>
-            <NextLink href='/create-post'>
-                <Button>Create Post</Button>
-            </NextLink>
-            <Box ml={'auto'}>{body}</Box>
+        <Flex position='sticky' top={0} zIndex={1} bg='black' p={4} align='center' justify='space-between'>
+            <Box>
+                <NextLink href='/'>
+                    <Box>
+                        <img src='../assets/at_logo_new.png'></img>
+                        <Heading color='white'>AlgoTut</Heading>
+                    </Box>
+                </NextLink>
+            </Box>
+            <Box>
+                <NextLink href='/create-post'>
+                    <Button
+                        bg='black'
+                        borderColor='white'
+                        border='1px'
+                        borderRadius='0'
+                        _hover={{
+                            background: '#00ffd2',
+                            color: 'black',
+                            boxShadow: '-5px 5px #ff4258',
+                        }}
+                    >
+                        CREATE TUTORIAL
+                    </Button>
+                </NextLink>
+            </Box>
+            <Box>{authOptions}</Box>
         </Flex>
     );
 };

@@ -12,6 +12,7 @@ export default class Document extends NextDocument {
                     <Main />
                     <NextScript />
                 </body>
+                <title>AlgoTut</title>
             </Html>
         );
     }
