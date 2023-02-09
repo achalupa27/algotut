@@ -12,6 +12,7 @@ export default class Document extends NextDocument {
                     <Main />
                     <NextScript />
                 </body>
+                <link rel='icon' href='/assets/at_logo.png' />
                 <title>AlgoTut</title>
             </Html>
         );
