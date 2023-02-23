@@ -17,7 +17,22 @@ export const InputField: React.FC<InputFieldProps> = ({ label, textarea, size: _
     return (
         <FormControl isInvalid={!!error}>
             <FormLabel htmlFor={field.name}>{label}</FormLabel>
-            <InputOrTextarea {...field} {...props} id={field.name} />
+            <InputOrTextarea
+                border='1px'
+                borderColor='white'
+                borderRadius='0'
+                _hover={{
+                    borderColor: '#00ffd2',
+                    boxShadow: '-3px 3px #ff4258',
+                }}
+                _focus={{
+                    borderColor: '#00ffd2',
+                    boxShadow: '-5px 5px #ff4258',
+                }}
+                {...field}
+                {...props}
+                id={field.name}
+            />
             {error ? <FormErrorMessage>{error}</FormErrorMessage> : null}
         </FormControl>
     );

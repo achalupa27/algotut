@@ -1,9 +1,11 @@
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Heading, Text } from '@chakra-ui/react';
 import { withUrqlClient } from 'next-urql';
 import { EditDeletePostButtons } from '../../components/EditDeletePostButtons';
 import { Layout } from '../../components/Layout';
 import { createUrqlClient } from '../../utils/createUrqlClient';
 import { useGetPostFromUrl } from '../../utils/useGetPostFromUrl';
+import ReactMarkdown from 'react-markdown';
+var parse = require('html-react-parser');
 
 const Post = ({}) => {
     const [{ data, error, fetching }] = useGetPostFromUrl();
@@ -27,12 +29,11 @@ const Post = ({}) => {
             </Layout>
         );
     }
-
     return (
         <Layout>
             <Heading>{data.post.title}</Heading>
             <EditDeletePostButtons id={data.post.id} creatorId={data.post.creator.id} />
-            {data.post.text}
+            <ReactMarkdown>{data.post.text}</ReactMarkdown>
         </Layout>
     );
 };

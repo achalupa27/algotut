@@ -2002,15 +2002,15 @@
     "hey-listen" "^1.0.8"
     "tslib" "^2.3.1"
 
-"@next/env@13.1.2":
-  "integrity" "sha512-PpT4UZIX66VMTqXt4HKEJ+/PwbS+tWmmhZlazaws1a+dbUA5pPdjntQ46Jvj616i3ZKN9doS9LHx3y50RLjAWg=="
-  "resolved" "https://registry.npmjs.org/@next/env/-/env-13.1.2.tgz"
-  "version" "13.1.2"
+"@next/env@13.2.0":
+  "integrity" "sha512-yv9oaRVa+AxFa27uQOVecS931NrE+GcQSqcL2HaRxL8NunStLtPiyNm/VixvdzfiWLabMz4dXvbXfwCNaECzcw=="
+  "resolved" "https://registry.npmjs.org/@next/env/-/env-13.2.0.tgz"
+  "version" "13.2.0"
 
-"@next/swc-win32-x64-msvc@13.1.2":
-  "integrity" "sha512-avsyveEvcvH42PvKjR4Pb8JlLttuGURr2H3ZhS2b85pHOiZ7yjH3rMUoGnNzuLMApyxYaCvd4MedPrLhnNhkog=="
-  "resolved" "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.1.2.tgz"
-  "version" "13.1.2"
+"@next/swc-win32-x64-msvc@13.2.0":
+  "integrity" "sha512-QTAjSuPevnZnlHfC4600+4NvxRuPar6tWdYbPum9vnk3OIH1xu9YLK+2ArPGFd0bB2K8AoY2SIMbs1dhK0GjQQ=="
+  "resolved" "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.2.0.tgz"
+  "version" "13.2.0"
 
 "@nodelib/fs.scandir@2.1.5":
   "integrity" "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="
@@ -2124,6 +2124,13 @@
   dependencies:
     "@types/express" "*"
 
+"@types/domutils@*":
+  "integrity" "sha512-w542nRQ0vpXQjLYP52LKqrugQtUq580dEDiDIyZ6IBmV8a3LXjGVNxfj/jUQxS0kDsbZAWsSxQOcTfVX3HRdwg=="
+  "resolved" "https://registry.npmjs.org/@types/domutils/-/domutils-1.7.4.tgz"
+  "version" "1.7.4"
+  dependencies:
+    "domhandler" "^2.4.0"
+
 "@types/express-serve-static-core@^4.17.31":
   "integrity" "sha512-aI5h/VOkxOF2Z1saPy0Zsxs5avets/iaiAJYznQFm5By/pamU31xWKL//epiF4OfUA2qTOc9PV6tCUjhO8wlZA=="
   "resolved" "https://registry.npmjs.org/@types/express-serve-static-core/-/express-serve-static-core-4.17.32.tgz"
@@ -2142,6 +2149,15 @@
     "@types/express-serve-static-core" "^4.17.31"
     "@types/qs" "*"
     "@types/serve-static" "*"
+
+"@types/htmlparser2@*":
+  "integrity" "sha512-XA74aD+acytofnZic9n83Rxy/IZ259299bYPx5SEyx7uymPi79lRyKDkhJlsuCaPHB7rEoTEhRN4Vm2G5WmHHg=="
+  "resolved" "https://registry.npmjs.org/@types/htmlparser2/-/htmlparser2-3.10.3.tgz"
+  "version" "3.10.3"
+  dependencies:
+    "@types/domutils" "*"
+    "@types/node" "*"
+    "domhandler" "^2.4.0"
 
 "@types/js-yaml@^4.0.0":
   "integrity" "sha512-FhpRzf927MNQdRZP0J5DLIdTXhjLYzeUTmLAu69mnVksLH9CJY3IuSeEgbKUki7GQZm0WqDkGzyxju2EZGD2wA=="
@@ -2207,6 +2223,14 @@
   "resolved" "https://registry.npmjs.org/@types/react-dom/-/react-dom-18.0.9.tgz"
   "version" "18.0.9"
   dependencies:
+    "@types/react" "*"
+
+"@types/react-html-parser@^2.0.2":
+  "integrity" "sha512-avS2QzBMCUTGO2+gi3rWG6WreuU8zhf4b5CbS11itYlvLbwt5wmxBqQN4/f2z/JR/6Kvdt8ohAxhztb8XQHdPQ=="
+  "resolved" "https://registry.npmjs.org/@types/react-html-parser/-/react-html-parser-2.0.2.tgz"
+  "version" "2.0.2"
+  dependencies:
+    "@types/htmlparser2" "*"
     "@types/react" "*"
 
 "@types/react@*", "@types/react@^16.8.0 || ^17.0.0 || ^18.0.0", "@types/react@^16.9.0 || ^17.0.0 || ^18.0.0", "@types/react@^18.0.0":
@@ -2917,6 +2941,14 @@
   "version" "3.0.1"
   dependencies:
     "path-type" "^4.0.0"
+
+"domelementtype@1":
+  "version" "1.3.1"
+
+"domhandler@^2.4.0":
+  "version" "2.4.2"
+  dependencies:
+    "domelementtype" "1"
 
 "dot-case@^3.0.4":
   "integrity" "sha512-Kv5nKlh6yRrdrGvxeJ2e5y2eRUpkUosIW4A2AS38zwSz27zu7ufDwQPi5Jhs3XAlGNetl3bmnGhQsMtkKJnj3w=="
@@ -3768,29 +3800,29 @@
     "react-ssr-prepass" "^1.4.0"
 
 "next@latest":
-  "integrity" "sha512-Rdnnb2YH///w78FEOR/IQ6TXga+qpth4OqFSem48ng1PYYKr6XBsIk1XVaRcIGM3o6iiHnun0nJvkJHDf+ICyQ=="
-  "resolved" "https://registry.npmjs.org/next/-/next-13.1.2.tgz"
-  "version" "13.1.2"
+  "integrity" "sha512-vhByvKHedsaMwNTwXKzK4IMmNp7XI7vN4etcGUoIpLrIuDfoYA3bS0ImS4X9F6lKzopG5aVp7a1CjuzF2NGkvA=="
+  "resolved" "https://registry.npmjs.org/next/-/next-13.2.0.tgz"
+  "version" "13.2.0"
   dependencies:
-    "@next/env" "13.1.2"
+    "@next/env" "13.2.0"
     "@swc/helpers" "0.4.14"
     "caniuse-lite" "^1.0.30001406"
     "postcss" "8.4.14"
     "styled-jsx" "5.1.1"
   optionalDependencies:
-    "@next/swc-android-arm-eabi" "13.1.2"
-    "@next/swc-android-arm64" "13.1.2"
-    "@next/swc-darwin-arm64" "13.1.2"
-    "@next/swc-darwin-x64" "13.1.2"
-    "@next/swc-freebsd-x64" "13.1.2"
-    "@next/swc-linux-arm-gnueabihf" "13.1.2"
-    "@next/swc-linux-arm64-gnu" "13.1.2"
-    "@next/swc-linux-arm64-musl" "13.1.2"
-    "@next/swc-linux-x64-gnu" "13.1.2"
-    "@next/swc-linux-x64-musl" "13.1.2"
-    "@next/swc-win32-arm64-msvc" "13.1.2"
-    "@next/swc-win32-ia32-msvc" "13.1.2"
-    "@next/swc-win32-x64-msvc" "13.1.2"
+    "@next/swc-android-arm-eabi" "13.2.0"
+    "@next/swc-android-arm64" "13.2.0"
+    "@next/swc-darwin-arm64" "13.2.0"
+    "@next/swc-darwin-x64" "13.2.0"
+    "@next/swc-freebsd-x64" "13.2.0"
+    "@next/swc-linux-arm-gnueabihf" "13.2.0"
+    "@next/swc-linux-arm64-gnu" "13.2.0"
+    "@next/swc-linux-arm64-musl" "13.2.0"
+    "@next/swc-linux-x64-gnu" "13.2.0"
+    "@next/swc-linux-x64-musl" "13.2.0"
+    "@next/swc-win32-arm64-msvc" "13.2.0"
+    "@next/swc-win32-ia32-msvc" "13.2.0"
+    "@next/swc-win32-x64-msvc" "13.2.0"
 
 "no-case@^3.0.4":
   "integrity" "sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg=="

@@ -25,14 +25,33 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
         // user not logged in
         authOptions = (
             <>
-                <Flex>
+                <Flex width='120px'>
                     <NextLink href='/login'>
-                        <Box color='white' mr={2}>
+                        <Box
+                            width='50px'
+                            color='white'
+                            _hover={{
+                                color: '#00ffd2',
+                                textShadow: '-1px 1px #ff4258',
+                                fontWeight: '700',
+                            }}
+                            mr={2}
+                        >
                             Login
                         </Box>
                     </NextLink>
                     <NextLink href='/register'>
-                        <Box color='white'>Register</Box>
+                        <Box
+                            width='70px'
+                            color='white'
+                            _hover={{
+                                color: '#00ffd2',
+                                textShadow: '-1px 1px #ff4258',
+                                fontWeight: '700',
+                            }}
+                        >
+                            Register
+                        </Box>
                     </NextLink>
                 </Flex>
             </>
@@ -41,7 +60,7 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
         // user logged in
         authOptions = (
             <Flex>
-                <Box mr={2}>{data.me.username}</Box>
+                <Box mr={4}>{data.me.username}</Box>
                 <Button
                     variant='link'
                     onClick={async () => {
@@ -49,6 +68,11 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
                         router.reload();
                     }}
                     isLoading={logoutFetching}
+                    _hover={{
+                        color: '#00ffd2',
+                        textShadow: '-1px 1px #ff4258',
+                        fontWeight: '700',
+                    }}
                 >
                     Log Out
                 </Button>
@@ -60,9 +84,8 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
         <Flex position='sticky' top={0} zIndex={1} bg='black' p={4} align='center' justify='space-between'>
             <Box>
                 <NextLink href='/'>
-                    <Box>
-                        <img src='../assets/at_logo_new.png'></img>
-                        <Heading color='white'>AlgoTut</Heading>
+                    <Box ml={2} width='36px'>
+                        <img src='/at_logo_new.png'></img>
                     </Box>
                 </NextLink>
             </Box>
@@ -73,6 +96,7 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
                         borderColor='white'
                         border='1px'
                         borderRadius='0'
+                        ml='84px'
                         _hover={{
                             background: '#00ffd2',
                             color: 'black',
@@ -83,7 +107,7 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
                     </Button>
                 </NextLink>
             </Box>
-            <Box>{authOptions}</Box>
+            <Box mr={2}>{authOptions}</Box>
         </Flex>
     );
 };

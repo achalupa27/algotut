@@ -31,11 +31,26 @@ const Register: React.FC<registerProps> = ({}) => {
             >
                 {({ isSubmitting }) => (
                     <Form>
-                        <InputField name='username' placeholder='username' label='Username' />
-                        <InputField name='email' placeholder='email' label='email' />
+                        <InputField name='username' placeholder='Esername' label='Username' />
                         <Box mt={4} />
-                        <InputField name='password' placeholder='password' label='Password' type='password' />
-                        <Button mt={4} type='submit' isLoading={isSubmitting} color='teal'>
+                        <InputField name='email' placeholder='Email' label='Email' />
+                        <Box mt={4} />
+                        <InputField name='password' placeholder='Password' label='Password' type='password' />
+                        <Button
+                            mt={8}
+                            bg='black'
+                            borderColor='white'
+                            border='1px'
+                            borderRadius='0'
+                            _hover={{
+                                background: '#00ffd2',
+                                color: 'black',
+                                boxShadow: '-5px 5px #ff4258',
+                            }}
+                            width='100%'
+                            type='submit'
+                            isLoading={isSubmitting}
+                        >
                             Register
                         </Button>
                     </Form>

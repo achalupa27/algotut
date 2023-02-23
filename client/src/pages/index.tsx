@@ -30,7 +30,13 @@ const Index = () => {
                                 <UpdootSection post={p} />
                                 <Box flex={1}>
                                     <NextLink href='/post/[id]' as={`/post/${p.id}`}>
-                                        <Box>
+                                        <Box
+                                            _hover={{
+                                                color: '#00ffd2',
+                                                textShadow: '-2px 2px #ff4258',
+                                                outline: '1px',
+                                            }}
+                                        >
                                             <Heading fontSize='xl'>{p.title}</Heading>
                                         </Box>
                                     </NextLink>

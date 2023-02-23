@@ -36,13 +36,27 @@ const Login: React.FC<{}> = ({}) => {
                     <Form>
                         <InputField name='usernameOrEmail' placeholder='Username or Email' label='Username or Email' />
                         <Box mt={4} />
-                        <InputField name='password' placeholder='password' label='Password' type='password' />
+                        <InputField name='password' placeholder='Password' label='Password' type='password' />
                         <Flex mt={2}>
                             <NextLink href='/forgot-password'>
                                 <Link ml='auto'>Forgot Password</Link>
                             </NextLink>
                         </Flex>
-                        <Button mt={4} type='submit' isLoading={isSubmitting} color='teal'>
+                        <Button
+                            mt={8}
+                            bg='black'
+                            borderColor='white'
+                            border='1px'
+                            borderRadius='0'
+                            _hover={{
+                                background: '#00ffd2',
+                                color: 'black',
+                                boxShadow: '-5px 5px #ff4258',
+                            }}
+                            width='100%'
+                            type='submit'
+                            isLoading={isSubmitting}
+                        >
                             Login
                         </Button>
                     </Form>

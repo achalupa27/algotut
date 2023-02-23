@@ -1,4 +1,4 @@
-import { Button, Box } from '@chakra-ui/react';
+import { Button, Box, Link } from '@chakra-ui/react';
 import { Formik, Form } from 'formik';
 import { withUrqlClient } from 'next-urql';
 import { useRouter } from 'next/router';
@@ -35,7 +35,10 @@ const EditPost = ({}) => {
         );
     }
     return (
-        <Layout variant='small'>
+        <Layout variant='regular'>
+            <Link href='https://commonmark.org/help/' target='_blank'>
+                Markdown reference guide.
+            </Link>
             <Formik
                 initialValues={{ title: data.post.title, text: data.post.text }}
                 onSubmit={async (values) => {
@@ -47,8 +50,22 @@ const EditPost = ({}) => {
                     <Form>
                         <InputField name='title' placeholder='Title' label='Title' />
                         <Box mt={4} />
-                        <InputField textarea name='text' placeholder='text...' label='Body' />
-                        <Button mt={4} type='submit' isLoading={isSubmitting} color='teal'>
+                        <InputField textarea height='300px' name='text' placeholder='text...' label='Body' />
+                        <Button
+                            mt={4}
+                            bg='black'
+                            borderColor='white'
+                            border='1px'
+                            borderRadius='0'
+                            _hover={{
+                                background: '#00ffd2',
+                                color: 'black',
+                                boxShadow: '-5px 5px #ff4258',
+                            }}
+                            width='100%'
+                            type='submit'
+                            isLoading={isSubmitting}
+                        >
                             Update Post
                         </Button>
                     </Form>

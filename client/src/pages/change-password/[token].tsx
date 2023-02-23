@@ -48,7 +48,21 @@ const ChangePassword: NextPage = () => {
                                 </Box>
                             </Flex>
                         ) : null}
-                        <Button mt={4} type='submit' isLoading={isSubmitting} color='teal'>
+                        <Button
+                            mt={4}
+                            type='submit'
+                            bg='black'
+                            borderColor='white'
+                            border='1px'
+                            borderRadius='0'
+                            _hover={{
+                                background: '#00ffd2',
+                                color: 'black',
+                                boxShadow: '-5px 5px #ff4258',
+                            }}
+                            width='100%'
+                            isLoading={isSubmitting}
+                        >
                             Change Password
                         </Button>
                     </Form>
