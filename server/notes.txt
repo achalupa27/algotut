@@ -116,7 +116,7 @@ add dotenv-safe
         : add .env.example file
             - this makes sure all variables declared in this file are used
     - don't want to include .env in github
-    - dokku adds some production variables. if want to use custome (like SESSION_SECRET), need to add .env.production file
+    - dokku adds some production variables. if want to use custom (like SESSION_SECRET), need to add .env.production file
 
 setup initialization migration:
     create ormconfig.json
